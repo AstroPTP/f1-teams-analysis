@@ -22,6 +22,7 @@ public class DataEntryProgram {
                 System.out.println("-----");
             }
         } while (teamNum < 2);
+        sc.nextLine();// Consume integer token
 
         String grandPrix = "", teamName = "", carCode = "", driverName = "";
         int driverPosition = 0;
@@ -29,20 +30,22 @@ public class DataEntryProgram {
 
         // Loop to let user enter details for each team
         for (int i = 0; i < teamNum; i++) {
+            System.out.println("-----");
             System.out.println("Enter details for team " + (i + 1));
 
-            System.out.println("> Grand Prix: ");
+            System.out.print("> Grand Prix: ");
             grandPrix = sc.nextLine();
-            System.out.println("> Team Name: ");
+            System.out.print("> Team Name: ");
             teamName = sc.nextLine();
-            System.out.println("> Car Code: ");
+            System.out.print("> Car Code: ");
             carCode = sc.nextLine();
-            System.out.println("> Driver Name: ");
+            System.out.print("> Driver Name: ");
             driverName = sc.nextLine();
-            System.out.println("> Driver Position: ");
+            System.out.print("> Driver Position: ");
             driverPosition = sc.nextInt();
-            System.out.println("> Driver Fastest Lap: ");
+            System.out.print("> Driver Fastest Lap: ");
             driverFastestLap = sc.nextDouble();
+            sc.nextLine();// Consume integer token
         }
 
         sc.close(); // Close the scanner
