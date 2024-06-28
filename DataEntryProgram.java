@@ -16,7 +16,8 @@ public class DataEntryProgram {
             teamNum = sc.nextInt();
 
             if (teamNum < 2) {
-                System.out.println("Number of teams have to be greater than 2.");
+                System.out.println("Number of teams have to be greater than 2.\nPlease re-enter below");
+                System.out.println("-----");
             }
         } while (teamNum < 2);
 
