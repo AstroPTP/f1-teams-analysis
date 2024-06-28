@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class DataEntryProgram {
+    static final int DRIVERS_NUM = 2; // Constant variable for 2 drivers each team
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -20,6 +22,28 @@ public class DataEntryProgram {
                 System.out.println("-----");
             }
         } while (teamNum < 2);
+
+        String grandPrix = "", teamName = "", carCode = "", driverName = "";
+        int driverPosition = 0;
+        double driverFastestLap = 0.0;
+
+        // Loop to let user enter details for each team
+        for (int i = 0; i < teamNum; i++) {
+            System.out.println("Enter details for team " + (i + 1));
+
+            System.out.println("> Grand Prix: ");
+            grandPrix = sc.nextLine();
+            System.out.println("> Team Name: ");
+            teamName = sc.nextLine();
+            System.out.println("> Car Code: ");
+            carCode = sc.nextLine();
+            System.out.println("> Driver Name: ");
+            driverName = sc.nextLine();
+            System.out.println("> Driver Position: ");
+            driverPosition = sc.nextInt();
+            System.out.println("> Driver Fastest Lap: ");
+            driverFastestLap = sc.nextDouble();
+        }
 
         sc.close(); // Close the scanner
     }
